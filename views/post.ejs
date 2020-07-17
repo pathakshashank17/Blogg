@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+    <h1 class='pt-3'><%= title %></h1>
+    <p class="pt-2"><%= content %></p>
+    <form action="/delete" method="POST">
+        <textarea class="form-control d-none" name="newContent" id="newContent" cols="30" rows="10"><%= content %></textarea> <br>
+        <button id="edit" name="edit" value="<%= id %>" type="submit" class="btn btn-outline-success d-none">Save Changes</button>
+        <button id="showEditField" class="btn btn-outline-info" type="button">Edit</button>
+        <button name="delete" value="<%= id %>" type="submit" class="btn btn-outline-danger">Delete</button>
+    </form>
+<%- include('partials/footer') %>
