@@ -5,7 +5,7 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 const app = express();
 
-mongoose.connect("mongodb+srv://admin-shashank:password-DB@bloggersdb.lu4ql.mongodb.net/bloggerDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
